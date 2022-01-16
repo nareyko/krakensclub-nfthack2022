@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <title>Krakens Sailing Club</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/icons/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Krakens Sailing Club">
+    <meta name="application-name" content="Krakens Sailing Club">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="description" content="Krakens Sailing Club" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" />
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="manifest" href="/manifest.json" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <a name="home" />
+    <div class="w3-top">
+        <nav class="w3-bar w3-theme-d5 w3-xlarge">
+            <a href="#" class="w3-bar-item w3-button" style="padding:2px 8px;"><img src="img/logo-white-transparent.png" style="max-width:48px;"></a><a href="#" class="w3-bar-item w3-button w3-hide-small">KRAKENS SAILING
+                CLUB</a>
+            <div class="w3-right">
+                <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hide-large" onclick="toggleMenu()"><i
+                        class="fa fa-bars"></i></a>
+                <a href="https://discord.gg/2kGVqHwr7P" target="_blank" class="w3-bar-item w3-button discord"><i
+                        class="fab fa-discord"></i></a>
+                <a href="https://t.me/krakensclub" target="_blank" class="w3-bar-item w3-button telegram"><i
+                        class="fab fa-telegram"></i></a>
+                <a href="https://twitter.com/krakenssailing" target="_blank" class="w3-bar-item w3-button twitter"><i
+                        class="fab fa-twitter"></i></a>
+
+            </div>
+            <div class="w3-right w3-hide-small w3-hide-medium">
+                <a href="#" class="w3-button w3-bar-item"><i class="fa fa-fw fa-home"></i></a>
+                <a href="#roadmap" class="w3-button w3-bar-item"><i class="fa fa-fw fa-road"></i></a>
+                <a href="#faq" class="w3-button w3-bar-item"><i class="fa fa-fw fa-question"></i></a>
+            </div>
+        </nav>
+        <div id="navbar" class="w3-bar-block w3-theme-d5 w3-hide w3-hide-large">
+            <a href="#" class="w3-button w3-bar-item"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="#roadmap" class="w3-button w3-bar-item"><i class="fa fa-fw fa-road"></i> Roadmap</a>
+            <a href="#faq" class="w3-button w3-bar-item"><i class="fa fa-fw fa-question"></i> FAQ</a>
+        </div>
+    </div>
+    <header class="w3-container w3-theme w3-center" style="padding-top:64px;padding-bottom:32px;">
+        <h1 class="w3-wide">KRAKENS SAILING CLUB</h1>
+        <p class="w3-xlarge">We love sailing, creativity and blockchain</p>
+        <a href="https://discord.gg/2kGVqHwr7P" target="_blank" class="w3-button w3-theme-red w3-center w3-padding-large w3-large w3-margin-top">Join our Discord
+            Community</a>
+    </header>
+    <section class="w3-row-padding w3-padding w3-theme" style="background: url('/img/backgrounds/ship_1920.jpg') no-repeat center center;width:100%;background-size: cover;">
+        <h1 class="w3-wide w3-center w3-text-white">OUR GOALS</h1>
+        <div class="w3-row-padding w3-content">
+            <div class="w3-third">
+                <div class="w3-card-4 w3-white">
+
+                    <header class="w3-container w3-theme-orange w3-center w3-margin-top">
+                        <span style="font-size:7vw;">1</span>
+                    </header>
+
+                    <div class="w3-container">
+                        <p><b>Buy yachts and open a sailing company</b></p>
+                        <hr>
+                        <p>Provide sailing events, trainings, races and voyages for the Community</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-card-4 w3-white">
+
+                    <header class="w3-container w3-theme-orange w3-center w3-margin-top">
+                        <span style="font-size:7vw;">2</span>
+                    </header>
+
+
+                    <div class="w3-container">
+                        <p><b>Develop online services and a marine game</b></p>
+                        <hr>
+                        <p>Create an ecosystem where NFT owners may play and mine new tokens</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-card-4 w3-white">
+
+                    <header class="w3-container w3-theme-orange w3-center w3-margin-top">
+                        <span style="font-size:7vw;">3</span>
+                    </header>
+
+                    <div class="w3-container">
+                        <p><b>Help and support marine ecosystem</b></p>
+                        <hr>
+                        <p>Donate funds to definite events, which reports will be published in our socials</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="w3-center"><a href="https://discord.gg/2kGVqHwr7P" target="_blank" class="w3-button w3-theme-red w3-center w3-padding-large w3-large w3-margin-top">Join our Discord
+                Community</a></p>
+    </section>
+    <section class="w3-row-padding w3-theme w3-center w3-padding">
+        <div class="w3-content w3-theme">
+            <h1 class="w3-wide w3-center w3-color-orange">KRAKENS SAILING CLUB NFTs</h1>
+            <p class="w3-justify">From generation to generation there have been rumors told by sailors and citizens of coastal cities about creatures bigger than whales, faster than white sharks, with tentacles much longer than those of a giant squid. They ruled the seas and
+                oceans. </p>
+            <p class="w3-justify">They could be generous, making a seaman richer than a king, by giving them countless treasures from the sea bed, or vicious by grabbing them to the depths of the sea, making their servants.
+            </p>
+            <img src="img/deck-transparent.png" alt="Krakens Deck" class="w3-left" style="max-width:100%;">
+            <p class="w3-justify">They were called Krakens. But no one really knew if they existed or not.</p>
+            <p class="w3-justify">Meanwhile they created their civilization deep under water. Developing both technically and mentally, now they have learned to travel in space and to other dimensions. </p>
+            <p class="w3-justify">So, now we know they are real! Meet a new amazing Kraken collection. Become a Kraken Club member! Be a Kraken!</p>
+            <p class="w3-center">Conquer the Ocean and be its Master (and Сommander)!</p>
+            <p class="w3-center"><a href="https://discord.gg/2kGVqHwr7P" target="_blank" class="w3-button w3-theme-red w3-center w3-padding-large w3-large w3-margin-top">Join our Discord
+                    Community</a></p>
+        </div>
+    </section>
+    <section class="w3-row-padding w3-white w3-padding">
+        <div class="w3-content">
+            <h1 class="w3-wide w3-center">OUR RARITY SYSTEM</h1>
+            <ul>
+                <li>Common (~36% of NFTs with the lowest rarity score)</li>
+                <li>Rare (~24% of NFTs)</li>
+                <li>Legendary (~18% of NFTs)</li>
+                <li>Epic (~11% of NFTs)</li>
+                <li>Heroic (~6% of NFTs)</li>
+                <li>Unreal (~4% of NFTs)</li>
+                <li>Mythic (~1% of NFTs)</li>
+                <li>Exclusive/Custom (Level 8+ NFTs)</li>
+            </ul>
+        </div>
+    </section>
+    <section class="w3-row-padding w3-white w3-theme w3-padding">
+        <div class="w3-content">
+            <h1 class="w3-wide w3-center w3-color-orange">NFT LEVELS</h1>
+            <p>
+                Each Krakens Sailing Club NFT has a special attribute/feature - a level . For the first mint only Krakens Sailing Club NFTs level 1 will be issued.
+            </p>
+            <p>
+                Krakens Sailing Club NFTs level 2 will be twice as rare as Krakens Sailing Club NFTs level 1 on average (NFTs collections of each next level will be twice as rare on average as NFTs of the previous level).
+            </p>
+            <p>
+                To get Krakens Sailing Club NFTs level 2, you can exchange two Krakens Sailing Club NFTs level 1 (any rarity) to one random Krakens Sailing Club NFTs level 2. Level 1 NFTs will be returned to the the Mystic portal pool (or to Krakens Sailing Club).
+            </p>
+            <p class="w3-center"><img src="img/mysticportal-transparent.png" style="max-width:100%;background:white;">
+            </p>
+            <p>
+                So, even in case of getting not very rare NFTs during the first mint, you can get a more exclusive NFT. Krakens Sailing Club NFTs level 8 can not be used in the Mystic Portal.
+            </p>
+            <p>Giveaways:</p>
+            <ul>
+                <li>Level 0. Can be used in the Mystic portal. Can be used as a $200 coupon for sailing services*. Access to a Members-Only-Area**. Giveaways or second market only. Rating: Common. No voting rights.
+                </li>
+            </ul>
+            <p>Mint:</p>
+            <ul class="w3-white">
+                <li><b><u>Level 1. 8192 NFTs.</b></u> It's what you get during the mint (and some additional bonuses). Rarity: Rare-Mythic. Votes: 1/NFT</li>
+            </ul>
+            <p>Mystic portal (initial pool):</p>
+            <ul>
+                <li>Level 2. 4096 NFTs. Rarity: Legendary-Mythic. Votes: 3/NFT</li>
+                <li>Level 3. 2048 NFTs. Rarity: Epic-Mythic. Votes: 9/NFT</li>
+                <li>Level 4. 1024 NFTs. Rarity: Heroic-Mythic. Votes: 27/NFT</li>
+                <li>Level 5. 512 NFTs. Rarity: Unreal (probability: 94%)-Mythic. Votes: 81/NFT</li>
+                <li>Level 6. 256 NFTs. Rarity: Unreal (probability: 25%)-Mythic. Votes: 243/NFT</li>
+                <li>Level 7. 128 NFTs. Rarity: Mythic only. Votes: 729/NFT</li>
+                <li>Level 8. Rarity: Custom. Exclusive NFTs of members upgraded to the Level 8 and Krakens Sailing Club team. Can not be use in the Mystic pool. Votes: 2187/NFT.</li>
+            </ul>
+            <p>Later NFTs levels will be tied to Krakens Sailing Club bonuses for offline events. The higher the NFTs level is, the more bonuses you will get.</p>
+            <p>Krakens Sailing Club team can mint additional NFTs of any level for any marketing and business purpose.
+            </p>
+            <p>* - After starting paid services<br />** - After starting online services</p>
+        </div>
+    </section>
+    <section class="w3-row-padding w3-white w3-padding">
+        <div class="w3-content">
+            <h1 class="w3-wide w3-center">POWER PORTAL</h1>
+            <p>If you have a very rare Krakens Sailing Club NFT, you can upgrade it to the next level.</p>
+            <p>
+                You should have the second NFT of the same level. The first NFT, which you would like to upgrade will increase its level by 1.
+            </p>
+            <p>
+                The second NFT will be returned to the Mystic portal pool (or to Krakens Sailing Club).
+            </p>
+            <p class="w3-center"><img src="img/powerportal-upgrade-transparent.png" style="max-width:100%;background: white;"></p>
+            <p>Krakens Sailing Club NFTs level 0 can not be used in the Power Portal.</p>
+        </div>
+
+    </section>
+    <section class="w3-row-padding w3-theme w3-padding">
+        <div class="w3-content">
+            <h1 class="w3-wide w3-center">SWAP PORTAL</h1>
+            <p>If you have two Krakens Sailing Club NFTs with different levels you may just swap their levels using smart contract functionality.</p>
+            <p class="w3-center"><img src="img/powerportal-swap-transparent.png" style="max-width:100%;background: white;"></p>
+            <p>Krakens Sailing Club NFTs level 0 can not be used in the Power Portal.</p>
+        </div>
+    </section>
+
+
+    <section class="w3-row-padding w3-white w3-padding">
+        <div class="w3-content">
+            <h1 class="w3-wide w3-center">WHAT DO I RECEIVE DURING MINT?</h1>
+            <p>
+                <ol>
+                    <li>1 (one) NFT level 1.</li>
+                    <li>Each NFT will give you the following rights and access to:
+                        <ul>
+                            <li>An unique avatar on a transparent background (so you can use it on your own site and backgrounds).
+                            </li>
+                            <li>Backgrounds for corresponding NFT levels.</li>
+                            <li>Members-Only giveaways.</li>
+                            <li>Voting rights.</li>
+                            <li>Access to the Mystic portal (2 NFTs requred).</li>
+                            <li>Access to the Power portal (2 NFTs requred).</li>
+                            <li>Special discounts for sailing services*.</li>
+                            <li>Access to a Members-Only-Area**.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </p>
+            <p>* - After starting paid services<br />** - After starting online services</p>
+        </div>
+    </section>
+
+    <section class="w3-row-padding w3-theme w3-padding">
+        <div class="w3-content">
+            <a name="roadmap" />
+            <h1 class="w3-wide w3-center w3-color-orange">OUR ROADMAP</h1>
+            <h2>PRE LAUNCH</h2>
+            <p>
+                <ul class="w3-ul w3-card-4 w3-white" style="width:100%">
+                    <li class="w3-color-gray"><i class="far fa-check-circle"></i> Concept and initial graphics</li>
+                    <li class="w3-color-gray"><i class=" far fa-check-circle "></i> Website and socials beta-launch</li>
+                    <li class="w3-color-red"><i class="far fa-circle "></i> Website and socials launch</li>
+                    <li class="w3-color-red"><i class=" far fa-circle "></i> Krakens collection</li>
+                    <li class="w3-color-red"><i class="far fa-circle "></i> Building Discord and Telegram communities</li>
+                    <li class="w3-color-red"><i class="far fa-circle "></i> Daily community giveaways</li>
+                    <li class="w3-color-red"><i class=" far fa-circle "></i> Public mint launched</li>
+                </ul>
+            </p>
+            <h2>AFTER LAUNCH</h2>
+            <p>
+                <ul class="w3-ul w3-card-4 w3-white " style="width:100% ">
+                    <li><i class=" far fa-circle "></i> Rarity chart</li>
+                    <li><i class="far fa-circle "></i> Rarity score check functionality</li>
+                    <li><i class="far fa-circle "></i> Bounty marketing campaign</li>
+                </ul>
+            </p>
+
+            <h2>SHORT TERM (25% minted)</h2>
+            <p>
+                <ul class="w3-ul w3-card-4 w3-white " style="width:100% ">
+                    <li><i class="far fa-circle "></i> Member-Exclusive Merch Store</li>
+                    <li><i class="far fa-circle "></i> Special merch design for level 2 and higher</li>
+                    <li><i class="far fa-circle "></i> Buy the first Performance Cruiser</li>
+                    <li><i class="far fa-circle "></i> Extended Membership program</li>
+                    <li><i class="far fa-circle "></i> Free collection development based on DAO decision</li>
+                </ul>
+            </p>
+            <h2>MID TERM (100% minted)</h2>
+            <p>
+                <ul class="w3-ul w3-card-4 w3-white " style="width:100% ">
+                    <li><i class="far fa-circle "></i> Listing on marketplaces</li>
+                    <li><i class="far fa-circle "></i> Free collection dropped based on DAO decision</li>
+                    <li><i class="far fa-circle "></i> 3D-avatars for levels 3 and higher</li>
+                    <li><i class="far fa-circle "></i> Refitting the first Performance Cruiser</li>
+                    <li><i class="far fa-circle "></i> Organising 10 Expeditions/Races</li>
+                    <li><i class="far fa-circle "></i> Opening Sailing Training courses (online and offline)</li>
+                </ul>
+            </p>
+            <h2>LONG TERM</h2>
+            <p>
+                <ul class="w3-ul w3-card-4 w3-white " style="width:100% ">
+                    <li><i class="far fa-circle "></i> Animations for level 4 and higher</li>
+                    <li><i class="far fa-circle "></i> Development of Krakens io game</li>
+                    <li><i class="far fa-circle "></i> Buying additional sailboats and growing Training center</li>
+                    <li><i class="far fa-circle "></i> Announcement of Roadmap V.2</li>
+                </ul>
+            </p>
+            <p class="w3-center "><a href="https://discord.gg/2kGVqHwr7P" target="_blank " class="w3-button w3-theme-red w3-center w3-padding-large w3-large w3-margin-top ">Join our Discord
+                    Community</a></p>
+        </div>
+    </section>
+
+    <section class="w3-content w3-white w3-padding ">
+        <a name="faq" />
+        <h1 class="w3-wide w3-center ">FREQUENTLY ASKED QUESTIONS</h1>
+        <div class="w3-panel w3-leftbar w3-theme w3-theme-border-red" style="margin:0 !important; ">
+            <h2>Do I own the Krakens Sailing Club NFT after purchasing?</h2>
+        </div>
+        <div class="w3-panel w3-leftbar w3-white " style="margin-top:0 !important; ">
+            <p>
+                You have broad rights to use the art associated with your NFT under Krakens Sailing Club NFT License. You can do any of the following:
+                <ul>
+                    <li>Use the art for your own personal, non-commercial use;</li>
+                    <li>Use the art when you’re on a marketplace that allows the purchase and sale of your art, as long as the marketplace cryptographically verifies that you are the owner;</li>
+                    <li>Use the art when you’re on a third party website or app that allows the inclusion, involvement, or participation of your art, as long as the website/app cryptographically verifies that you are the owner, and the art doesn’t stay on
+                        the website/app after you’ve left;</li>
+                    <li>Use the art to commercialize your own merchandise, provided that you aren’t earning more than $100,000 in revenue each year from doing so.</li>
+                </ul>
+
+            </p>
+        </div>
+        <div class="w3-panel w3-leftbar w3-theme w3-theme-border-red" style="margin:0 !important; ">
+            <h2>What can I do with my Krakens Sailing Club NFT?</h2>
+        </div>
+        <div class="w3-panel w3-leftbar w3-white " style="margin-top:0 !important; ">
+            <p>
+                You will be able to participate in issuing NFTs, exchanging current NFTs for new ones (see the description of the exchange), and upgrade your current NFTs.
+            </p>
+            <p> Moreover, our team are looking forward to developing online and offline services and each Krakens Sailing Club NFT will be a clubcard, with VIP access to services developed.
+            </p>
+        </div>
+        <div class="w3-panel w3-leftbar w3-theme w3-theme-border-red" style="margin:0 !important; ">
+
+            <h2>How can I get Krakens Sailing Club NFT?</h2>
+        </div>
+        <div class="w3-panel w3-leftbar w3-white " style="margin-top:0 !important; ">
+            <p>
+                You can participate in minting during the drop date as well as buy NFTs from their current owners on different platforms.
+            </p>
+            <p>
+                There are no refunds for NFTs, and we will not field customer complaints. Please only buy NFTs if you understand that doing so does not necessarily give any direct economic value.
+            </p>
+        </div>
+        <div class="w3-panel w3-leftbar w3-theme w3-theme-border-red" style="margin:0 !important; ">
+
+            <h2>When is the drop? How much?</h2>
+        </div>
+        <div class="w3-panel w3-leftbar w3-white " style="margin-top:0 !important; ">
+            <p>
+                The nearest drop is planned for Q1 2022. 8192 NFTs level 1 will be minted.
+            </p>
+            <p>
+                Further mintings of Krakens Sailing Club NFTs will be available only for current Krakens Sailing Club NFTs owners.
+            </p>
+            <p>
+                Follow our socials and Discord to get the most up-to-date information.
+            </p>
+        </div>
+        <div class="w3-panel w3-leftbar w3-theme w3-theme-border-red" style="margin:0 !important; ">
+
+            <h2>Will there be a secondary market?</h2>
+        </div>
+        <div class="w3-panel w3-leftbar w3-white " style="margin-top:0 !important; ">
+
+            <p>
+                Yes, we are planning listing on one of the marketplaces, and we are currently negotiating with several of them.
+            </p>
+            <p>
+                In future we are going to create our own marketplace.
+            </p>
+        </div>
+
+        <div class="w3-panel w3-leftbar w3-theme w3-theme-border-red" style="margin:0 !important; ">
+
+            <h2>Are there secondary sale royalties? Will there be a community fund?</h2>
+        </div>
+        <div class="w3-panel w3-leftbar w3-white " style="margin-top:0 !important; ">
+            <p>
+                Yes. Initial royalties will be 10%.
+            </p>
+            <p>
+                We will be contributing 50% of the back from secondary market royalties into the community vault for buying back and 1 year blocking of the cheapest Krakens Sailing Club NFTs. After this, they will be returned for sale on the secondary market at market
+                price.
+            </p>
+            <p>
+                We really value Krakens Sailing Club NFTs and club membership and this mechanism is aimed at NFTs deflation.
+            </p>
+        </div>
+        <div class="w3-panel w3-leftbar w3-theme w3-theme-border-red" style="margin:0 !important; ">
+
+            <h2>Which charities are being donated to?</h2>
+        </div>
+        <div class="w3-panel w3-leftbar w3-white " style="margin-top:0 !important; ">
+            <p>
+                We will donate a portion of our sales to nonprofits dealing with research of oceans and seas, and also to the projects aimed at continuous support of marine ecosystems and their inhabitants.
+            </p>
+            <p>
+                We will be donating funds to definite events, which reports and materials will be published on our site and in socials.
+            </p>
+        </div>
+        <p class="w3-center "><a href="https://discord.gg/2kGVqHwr7P" target="_blank " class="w3-button w3-theme-red w3-center w3-padding-large w3-large w3-margin-top ">More questions? Join
+                our Discord</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-d5 w3-large ">
+        <p class="w3-left-align ">Copyright © 2021-2022 Krakens Sailing Club.</p>
+    </footer>
+    <script src="scripts/scripts.js "></script>
+</body>
+
+</html>

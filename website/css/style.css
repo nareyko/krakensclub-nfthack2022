@@ -1,0 +1,318 @@
+html {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+
+
+/* colors */
+
+.w3-theme-l5 {
+    color: #000 !important;
+    background-color: #eaf3fa !important;
+}
+
+.w3-theme-l4 {
+    color: #000 !important;
+    background-color: #bad8ed !important;
+}
+
+.w3-theme-l3 {
+    color: #fff !important;
+    background-color: #75b1db !important;
+}
+
+.w3-theme-l2 {
+    color: #fff !important;
+    background-color: #3389c7 !important;
+}
+
+.w3-theme-l1 {
+    color: #fff !important;
+    background-color: #215a82 !important;
+}
+
+.w3-theme-d1 {
+    color: #fff !important;
+    background-color: #0e2637 !important;
+}
+
+.w3-theme-d2 {
+    color: #fff !important;
+    background-color: #0d2231 !important;
+}
+
+.w3-theme-d3 {
+    color: #fff !important;
+    background-color: #0b1d2b !important;
+}
+
+.w3-theme-d4 {
+    color: #fff !important;
+    background-color: #091924 !important;
+}
+
+.w3-theme-d5 {
+    color: #fff !important;
+    background-color: #08151e !important;
+}
+
+.w3-theme-light {
+    color: #000 !important;
+    background-color: #eaf3fa !important;
+}
+
+.w3-theme-dark {
+    color: #fff !important;
+    background-color: #08151e !important;
+}
+
+.w3-theme-action {
+    color: #fff !important;
+    background-color: #08151e !important;
+}
+
+.w3-theme {
+    color: #fff !important;
+    background-color: #102b3e !important;
+}
+
+.w3-text-theme {
+    color: #102b3e !important;
+}
+
+.w3-border-theme {
+    border-color: #102b3e !important;
+}
+
+.w3-hover-theme:hover {
+    color: #fff !important;
+    background-color: #102b3e !important;
+}
+
+.w3-hover-text-theme:hover {
+    color: #102b3e !important;
+}
+
+.w3-hover-border-theme:hover {
+    border-color: #102b3e !important;
+}
+
+.w3-color-main {
+    color: #102b3e !important;
+}
+
+.w3-color-gray {
+    color: #76877D !important;
+}
+
+.w3-theme-gray {
+    color: #fff !important;
+    background-color: #76877D !important;
+}
+
+.w3-color-red {
+    color: #931621 !important;
+}
+
+.w3-theme-red {
+    color: #fff !important;
+    background-color: #931621 !important;
+}
+
+.w3-theme-border-red {
+    border-color: #931621 !important;
+}
+
+.w3-color-yellow {
+    color: #FFFC31 !important;
+}
+
+.w3-theme-yellow {
+    background-color: #FFFC31 !important;
+}
+
+.w3-color-orange {
+    color: #FFB20F !important;
+}
+
+.w3-theme-orange {
+    color: #fff;
+    background-color: #FFB20F !important;
+}
+
+.discord {
+    background-color: #7289DA;
+    color: #fff;
+}
+
+.twitter {
+    background: #1DA1F2;
+}
+
+.telegram {
+    background: #0088CC;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url('/img/backgrounds/ship_1920.jpg');
+    background: url('/img/backgrounds/ship_1920.jpg') no-repeat center center;
+    /* Set a specific height */
+    /* min-height: 100%; */
+    /* Create the parallax scrolling effect */
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.maskimage {
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    mask-mode: alpha;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+}
+
+#krakenbackground {
+    background-color: red;
+    /* width: 300px;
+    height: 300px; */
+}
+
+#krakenbody {
+    -webkit-mask-image: url(/img/kraken-body300.png);
+    mask-image: url(/img/kraken-body300.png);
+    background-color: green;
+}
+
+#krakeneyes {
+    -webkit-mask-image: url(/img/kraken-eyes300.png);
+    mask-image: url(/img/kraken-eyes300.png);
+    background-color: blue;
+}
+
+#krakenears {
+    -webkit-mask-image: url(/img/kraken-ears300.png);
+    mask-image: url(/img/kraken-ears300.png);
+    background-color: yellow;
+}
+
+#krakencontour {
+    -webkit-mask-image: url(/img/kraken-black-transparent300.png);
+    mask-image: url(/img/kraken-black-transparent300.png);
+    background-color: black;
+}
+
+.krakencard {
+    font-size: 2vw;
+    height: inherit;
+}
+
+.krakencard h4 {
+    font-size: 3vw;
+    font-weight: bold;
+    height: inherit;
+}
+
+.krakencard h5 {
+    font-size: 2vw;
+    font-weight: bold;
+    height: inherit;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #0e2637f0;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}

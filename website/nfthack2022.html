@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <title>Krakens Sailing Club</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/icons/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Krakens Sailing Club">
+    <meta name="application-name" content="Krakens Sailing Club">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="description" content="Krakens Sailing Club" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" />
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="manifest" href="/manifest.json" />
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+</head>
+
+<body>
+    <div class="w3-top">
+        <nav class="w3-bar w3-theme-d5 w3-xlarge">
+            <a href="#" class="w3-bar-item w3-button" style="padding:2px 8px;"><img src="img/logo-white-transparent.png" style="max-width:48px;"></a><a href="#" class="w3-bar-item w3-button w3-hide-small">KRAKENS SAILING
+                CLUB</a>
+            <div class="w3-right">
+                <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hide-large" onclick="toggleMenu()"><i
+                        class="fa fa-bars"></i></a>
+                <a href="javascript:wallet_logout()" title="Disconnect wallet" class="w3-button w3-bar-item w3-theme-gray wallet-connected"><i class="far fa-arrow-alt-circle-up"></i></a>
+                <a href="https://discord.gg/2kGVqHwr7P" title="Join Discord" target="_blank" class="w3-bar-item w3-button discord"><i
+                        class="fab fa-discord"></i></a>
+                <!-- <a href="https://t.me/krakensclub" target="_blank" class="w3-bar-item w3-button telegram"><i
+                        class="fab fa-telegram"></i></a> -->
+                <a href="https://twitter.com/krakenssailing" title="Follow Twitter" target="_blank" class="w3-bar-item w3-button twitter"><i
+                        class="fab fa-twitter"></i></a>
+
+            </div>
+            <div class="w3-right w3-hide-small w3-hide-medium">
+
+                <a href="#" class="w3-button w3-bar-item"><i class="fa fa-fw fa-home"></i></a>
+                <a href="#roadmap" class="w3-button w3-bar-item"><i class="fa fa-fw fa-road"></i></a>
+                <a href="#faq" class="w3-button w3-bar-item"><i class="fa fa-fw fa-question"></i></a>
+            </div>
+        </nav>
+        <div id="navbar" class="w3-bar-block w3-theme-d5 w3-hide w3-hide-large">
+            <a href="#" class="w3-button w3-bar-item"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="#roadmap" class="w3-button w3-bar-item"><i class="fa fa-fw fa-road"></i> Roadmap</a>
+            <a href="#faq" class="w3-button w3-bar-item"><i class="fa fa-fw fa-question"></i> FAQ</a>
+        </div>
+    </div>
+    <header class="w3-container w3-theme w3-center" style="padding-top:64px;">
+        <h1 class="w3-wide">KRAKENS SAILING CLUB</h1>
+    </header>
+    <div class="wallet-disconnected w3-container w3-center w3-theme" style="padding-bottom:32px;">
+        <p class="w3-xlarge">We love sailing, creativity and blockchain</p>
+        <button class="w3-button w3-theme-red w3-center w3-padding-large w3-large w3-margin-top" onclick="wallet_login()">Login using Metamask</button>
+    </div>
+
+    <div class="wallet-connected w3-row w3-center w3-theme" style="display:none;padding-bottom:32px;">
+        <div class="w3-container">
+            <p class="w3-xlarge">Linked address: <span id="linked-address"></span></p>
+            <button class="w3-button w3-theme-yellow w3-center w3-padding-large w3-large w3-margin-top w3-text-black" onclick="showModal('mint-modal')">Mint Now</button>
+        </div>
+        <div id="nft-panel" class="w3-row-padding w3-theme-l1" style="margin-top:16px;display:none;">
+            <h1>Your NFTs</h1>
+            <span id="nft-list"></span>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="mint-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="hideModal('mint-modal')">&times;</span>
+            <p>Select up to 64 NFTs to mint.</p>
+            <div class="slidecontainer">
+                <span class="w3-button w3-white w3-center w3-padding-large w3-large w3-margin-top">I want to mint <span id="mint-count"></span> NFTs</span>
+                <button class="w3-button w3-theme-yellow w3-center w3-padding-large w3-large w3-margin-top w3-text-black" onclick="mint()">Mint Now</button>
+                <hr />
+                <input type="range" min="1" max="64" value="1" class="slider" id="mint-range">
+            </div>
+        </div>
+
+    </div>
+    <div id="transfer-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content w3-container">
+            <span class="close" onclick="hideModal('transfer-modal')">&times;</span>
+            <h1>I want to transfer <span id="transfer-count"></span> NFT #<span id="transfer-id-span"></span> to <input type="text" id="transfer-address"></h1>
+            <button class="w3-button w3-theme-yellow w3-center w3-padding-large w3-large w3-margin-top w3-text-black" onclick="transfernft()">Transfer</button>
+            <hr />
+            <input type="range" min="0" max="64" value="1" class="slider" id="transfer-range">
+        </div>
+    </div>
+
+    <div id="power-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content w3-container">
+            <span class="close" onclick="hideModal('power-modal')">&times;</span>
+            <h1>I want to power NFT #<span id="power-id-span"></span> using NFT #<input type="text" id="power-id"></h1>
+            <button class="w3-button w3-theme-yellow w3-center w3-padding-large w3-large w3-margin-top w3-text-black" onclick="powernft()">Power</button>
+        </div>
+    </div>
+
+    <div id="swap-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content w3-container">
+            <span class="close" onclick="hideModal('swap-modal')">&times;</span>
+            <h1>I want to swap level of NFT #<span id="swap-id-span"></span> with level of NFT #<input type="text" id="swap-id"></h1>
+            <button class="w3-button w3-theme-yellow w3-center w3-padding-large w3-large w3-margin-top w3-text-black" onclick="swapnft()">Swap</button>
+        </div>
+    </div>
+
+    <div id="mystic-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content w3-container">
+            <span class="close" onclick="hideModal('mystic-modal')">&times;</span>
+            <h1>I want to get upper level NFT for exhange of NFT #<span id="mystic-id-span"></span> and NFT #<input type="text" id="mystic-id"></h1>
+            <button class="w3-button w3-theme-yellow w3-center w3-padding-large w3-large w3-margin-top w3-text-black" onclick="mysticnft()">Get</button>
+        </div>
+    </div>
+    <div class="w3-container w3-row w3-white w3-padding">
+        <div class="w3-half">
+            <img src="logos/Logo_NFTHack.svg" style="max-width:80%">
+        </div>
+        <div class="w3-half w3-center">
+            <img src="logos/Polygon-logo.png " style="max-width:80%">
+            <img src="logos/OpenSea-Full-Logo (dark).png" style="max-width:80%">
+            <img src="logos/moralis.png" style="max-width:80%">
+        </div>
+    </div>
+
+    <input type="hidden" id="token-id">
+
+
+    <script type="text/javascript" src="scripts/nfthack2022.js"></script>
+    <script type="text/javascript" src="scripts/abi.js"></script>
+    <script type="text/javascript" src="scripts/transactions.js"></script>
+    <script src="scripts/scripts.js"></script>
+
+</body>
+
+</html>
